@@ -17,11 +17,31 @@
 			</div>
 
 		<div id="filters">
+			<!-- Course criteria options-->
+
 			<div class="content" style="display:block;">
 		        <form id="course-options-form" name="exam_options_form" action="" method="get">
-		            <div class="courses-option"><h4>Exam v. No Exam:</h4><select name="filter[]"><option value="0">All</option><option value="1">Exam</option><option value="2">No Exam</option></select></div>
-		            <div class="courses-option"><h4>Group v. Individual:</h4><select name="filter[]"><option value="3">All</option><option value="4">Group Work</option><option value="5">Individual Work</option></select></div><br>
+
+		            <div class="courses-option">
+									<h4>Exam v. No Exam:</h4>
+									<select name="filter[]">
+										<option value="0">All</option>
+										<option value="1">Exam</option>
+										<option value="2">No Exam</option>
+									</select>
+								</div>
+		            <div class="courses-option">
+									<h4>Group v. Individual:</h4>
+									<select name="filter[]">
+										<option value="3">All</option>
+										<option value="4">Group Work</option>
+										<option value="5">Individual Work</option>
+									</select>
+								</div>
+								<br>
 		        </form>
+
+				<!-- Submit button is here-->
 		    <input type="hidden" id="output1" name="view" value="table" /><input type="submit" name="course_options_submit" value="Submit"/>
 		    </div>
 		</div>
