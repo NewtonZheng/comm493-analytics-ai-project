@@ -24,7 +24,7 @@
 
 		            <div class="courses-option">
 									<h4>Exam v. No Exam:</h4>
-									<select name="filter[]">
+									<select id="exam_selection" name="filter[]">
 										<option value="0">All</option>
 										<option value="1">Exam</option>
 										<option value="2">No Exam</option>
@@ -32,7 +32,7 @@
 								</div>
 		            <div class="courses-option">
 									<h4>Group v. Individual:</h4>
-									<select name="filter[]">
+									<select id="course_selection" name="filter[]">
 										<option value="3">All</option>
 										<option value="4">Group Work</option>
 										<option value="5">Individual Work</option>
@@ -46,6 +46,8 @@
 		    </div>
 		</div>
 
+		<!-- Show courses that match results. Use as tester before putting into table-->
+		<div id="final_results"></div>
 
 		<div id="table">
 			<h2>Results</h2>
