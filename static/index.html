@@ -5,21 +5,37 @@
 	<title>Queen's University Arts and Science Online Courses</title>
 	<!-- Added CSS and bootstrap code link -->
 	<link rel="stylesheet" href=/static/stylesheets/design.css>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
 
 	<body>
-
-		<div class="header">
-			<h1>Queen's University Arts and Science Online Courses</h1>
-			    <p>You can filter by a course's deliverable outline with regards to exams and/or group work!</p>
+	<div class="header">
+                <img src= "queens.png" width="200" height="150" alt="logo" background-colour="white"/>
+                <h3>Online Course Catalog</h3>
 			</div>
+
+        <div class="menu">
+            <ul class="nav">
+            <li>
+              <a href="index.html">Home</a></li>
+            <li>
+              <a href="https://www.queensu.ca">SOLUS</a></li>
+            <li>
+              <a href="https://www.queensu.ca/artsci_online/courses">Continuing and Distance Studies</a></li>
+            </ul>
+		</div>
+        
+        <div class="description">
+            <h3>Who Are We?</h3>
+            <p>This website is a medium for Queen’s University students to search through a more comprehensive list of Arts and Science online courses. By being able to filter by a course’s syllabus breakdown (ex. group work, exams), students will be able to cater their university education to their needs and wants.</p>
+            <p>After choosing the level of group work you wish to have and whether or not you want an in-person exam, just click 'Submit' and our database will prompt a table with all relevant results to your search! Along with the course code and units earned, the course name and term dates will also be shown.</p>
+            <p><i>Good luck with course selection!</i></p>
+        </div>
 
 		<div id="filters">
 			<!-- Course criteria options-->
-
 			<div class="content" style="display:block;">
+			<h3>Filter by:</h3>
 		        <form id="course-options-form" name="exam_options_form" action="" method="get">
             <!-- Course criteria options
 		            <div class="courses-option">
@@ -75,6 +91,11 @@
 			</table>
 		</div>
 
+<div class="footer">
+      <h4>Queen's University</h4>
+      <p><small>© 2019 Arts and Science Course Catalog, Continuing and Distance Studies, Queen's University. All Rights Reserved.</small></p>
+</div>
+		
   <!-- Added Javascript code link -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="static/js/primary.js"></script>
