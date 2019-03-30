@@ -7,12 +7,11 @@
 	<link rel="stylesheet" href=/static/stylesheets/design.css>
 
 </head>
-
 	<body>
 	<div class="header">
                 <img src= "queens.png" width="200" height="150" alt="logo" background-colour="white"/>
                 <h3>Online Course Catalog</h3>
-			</div>
+	</div>
 
         <div class="menu">
             <ul class="nav">
@@ -23,7 +22,7 @@
             <li>
               <a href="https://www.queensu.ca/artsci_online/courses">Continuing and Distance Studies</a></li>
             </ul>
-		</div>
+	</div>
         
         <div class="description">
             <h3>Who Are We?</h3>
@@ -32,72 +31,73 @@
             <p><i>Good luck with course selection!</i></p>
         </div>
 
-		<div id="filters">
-			<!-- Course criteria options-->
-			<div class="content" style="display:block;">
-			<h3>Filter by:</h3>
-		        <form id="course-options-form" name="exam_options_form" action="" method="get">
+	<div id="filters">
+		<!-- Course criteria options-->
+	<div class="content" style="display:block;">
+		<h3>Filter by:</h3>
+		<form id="course-options-form" name="exam_options_form" action="" method="get">
             <!-- Course criteria options
 		            <div class="courses-option">
-									<h4>Exam v. No Exam:</h4>
-									<select id="exam_selection" name="filter[]">
-										<option value="0">All</option>
-										<option value="1">Exam</option>
-										<option value="2">No Exam</option>
-									</select>
-								</div> -->
-		            <div class="courses-option">
-									<h4>Group v. Individual:</h4>
-									<select id="course_selection" name="filter[]">
-										<option value="3">All</option>
-										<option value="4">Group Work</option>
-										<option value="5">Individual Work</option>
-									</select>
-								</div>
-								<br>
+				<h4>Exam v. No Exam:</h4>
+				<select id="exam_selection" name="filter[]">
+					<option value="0">All</option>
+						<option value="1">Exam</option>
+						<option value="2">No Exam</option>
+				</select>
+			</div> -->
+		        <div class="courses-option">
+				<h4>Group v. Individual:</h4>
+				<select id="course_selection" name="filter[]">
+					<option value="3">All</option>
+						<option value="4">Group Work</option>
+						<option value="5">Individual Work</option>
+				</select>
+			</div>
+			<br>
 		        </form>
 
-				<!-- Submit button is here-->
+			<!-- Submit button is here-->
 		    <input type="hidden" id="output1" name="view" value="table" /><input type="submit" name="course_options_submit" value="Submit"/>
-		    </div>
-		</div>
+	</div>
+	</div>
 
 		<!-- Show courses that match results. Use as tester before putting into table-->
-		<div id="final_results"></div>
+	<div id="final_results"></div>
 
-		<div id="table">
-			<h2>Results</h2>
-			<table>
-			    <tr>
-			        <th>Course Code/Units</th>
-			        <th>Course Name</th>
-			        <th>Term</th>
-			    </tr>
-			    <tr>
-			        <td><a href="course.html" class="nav">ANAT100/3.0</a></td>
-			        <td>Anatomy of the Human Body</td>
-			        <td>Fall 2018</td>
-			    </tr>
-			    <tr>
-			        <td><a href=".html" class="nav">BCHM270/3.0</a></td>
-			        <td>Biochemical Basis of Health and Disease</td>
-			        <td>Winter 2019</td>
-			    </tr>
-			    <tr>
-			        <td><a href=".html" class="nav">PHAR100/3.0</a></td>
-			        <td>Introductory Pharmacology</td>
-			        <td>Winter 2019</td>
-			    </tr>
-			</table>
-		</div>
+	<div id="table">
+		<h2>Results</h2>
+		<table>
+		<tr>
+			<th>Course Code/Units</th>
+			<th>Course Name</th>
+			<th>Term</th>
+		</tr>
+		<tr>
+			<td><a href="course.html" class="nav">ANAT100/3.0</a></td>
+			<td>Anatomy of the Human Body</td>
+			<td>Fall 2018</td>
+		</tr>
+		<tr>
+			<td><a href=".html" class="nav">BCHM270/3.0</a></td>
+			<td>Biochemical Basis of Health and Disease</td>
+			<td>Winter 2019</td>
+		</tr>
+		<tr>
+			<td><a href=".html" class="nav">PHAR100/3.0</a></td>
+			<td>Introductory Pharmacology</td>
+			<td>Winter 2019</td>
+		</tr>
+		</table>
+	</div>
 
-<div class="footer">
-      <h4>Queen's University</h4>
-      <p><small>© 2019 Arts and Science Course Catalog, Continuing and Distance Studies, Queen's University. All Rights Reserved.</small></p>
-</div>
+	<div class="footer">
+      		<h4>Queen's University</h4>
+      		<p><small>© 2019 Arts and Science Course Catalog, Continuing and Distance Studies, Queen's University. All Rights Reserved.</small></p>
+	</div>
 		
   <!-- Added Javascript code link -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="static/js/primary.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="static/js/primary.js"></script>
+		
 	</body>
 </html>
