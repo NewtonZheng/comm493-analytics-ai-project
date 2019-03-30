@@ -19,7 +19,7 @@ $("#output1").on("click", function(event){
     url: '/search', //Set endpoint URL to display results as @ /search
     method: 'POST',
     data: {
-      exam : $("#exam_selection").val(),
+      //exam : $("#exam_selection").val(),
       group : $("course_selection").val(),
  //stores user input as a 'text' parameter data
 }
