@@ -5,7 +5,6 @@
     <title>Queen's University Arts and Science Online Courses</title>
 
     <!-- Added CSS and bootstrap code link -->
-    <link rel="stylesheet" href=/static/stylesheets/design.css>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
 </script>
 
@@ -13,6 +12,7 @@
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href=/static/design.css>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
@@ -92,16 +92,15 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-...
 
-
-	<div class="header">
-                <img src= "queens.png" width="200" height="150" alt="logo" background-colour="white"/>
-                <h3>Online Course Catalog</h3>
+    <div class="jumbotron text-center">
+        <img src="/static/queens.png" width="200" height="150" alt="logo" />
+        <h3>Online Course Catalog</h3>
 	</div>
 
         <div class="menu">
-            <ul class="nav">
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <ul class="nav nav-pills navbar-left">
             <li>
               <a href="index.html">Home</a></li>
             <li>
@@ -109,13 +108,15 @@
             <li>
               <a href="https://www.queensu.ca/artsci_online/courses">Continuing and Distance Studies</a></li>
             </ul>
-	</div>
+            </nav>
+        </div>
+
     <div class="container">
         <div class="description">
             <h3>Who Are We?</h3>
             <p>This website is a medium for Queen’s University students to search through a more comprehensive list of Arts and Science online courses. By being able to filter by a course’s syllabus breakdown (ex. group work, exams), students will be able to cater their university education to their needs and wants.</p>
             <p>After choosing the level of group work you wish to have and whether or not you want an in-person exam, just click 'Submit' and our database will prompt a table with all relevant results to your search! Along with the course code and units earned, the course name and term dates will also be shown.</p>
-            <p><i>Good luck with course selection!</i></p>
+            <p><i>Good luck with course selections!</i></p>
         </div>
 
 	<div id="filters">
@@ -148,7 +149,7 @@
 
 
 
-<h3>Please put your preferences for exams and group work :) </h3>
+<h3>Please put your preferences for exams and group work! </h3>
 	<form class="form-inline">
 		<!-- Email
 	  <div class="form-group">
@@ -199,35 +200,58 @@
 		<!-- Show courses that match results. Use as tester before putting into table-->
 	<div id="final_results"></div>
 
-	<div id="table">
-		<h2>Results</h2>
-		<table>
-		<tr>
-			<th>Course Code/Units</th>
-			<th>Course Name</th>
-			<th>Term</th>
-		</tr>
-		<tr>
-			<td><a href="course.html" class="nav">ANAT100/3.0</a></td>
-			<td>Anatomy of the Human Body</td>
-			<td>Fall 2018</td>
-		</tr>
-		<tr>
-			<td><a href=".html" class="nav">BCHM270/3.0</a></td>
-			<td>Biochemical Basis of Health and Disease</td>
-			<td>Winter 2019</td>
-		</tr>
-		<tr>
-			<td><a href=".html" class="nav">PHAR100/3.0</a></td>
-			<td>Introductory Pharmacology</td>
-			<td>Winter 2019</td>
-		</tr>
-		</table>
-	</div>
+        <br><br><br>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Course Code/Units</th>
+      <th scope="col">Course Name</th>
+      <th scope="col">Term</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/anatomy-of-the-human-body" class="nav">ANAT100/3.0</a></th>
+        <td>Anatomy of the Human Body</td>
+		<td>Fall 2018</td>
+    </tr>
+    <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/biochemical-basis-of-health-disease" class="nav">BCHEM270/3.0</a></th>
+        <td>Biochemical Basis of Health and Disease</td>
+        <td>Winter 2019</td>
+    </tr>
+    <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/interpersonal-approaches-in-healthcare" class="nav">IDIS280/3.0</a></th>
+		<td>Interpersonal Approaches in Healthcare</td>
+		<td>Winter 2019</td>
+    </tr>
+      <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/introductory-pharmacology" class="nav">PHAR100/3.0</a></th>
+		<td>Introductory Pharmacology</td>
+		<td>Winter 2019</td>
+    </tr>
+      <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/elements-of-computing-science" class="nav">CISC101/3.0</a></th>
+		<td>Elements of Computing Science</td>
+		<td>Summer 2019</td>
+    </tr>
+      <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/topics-in-innovation" class="nav">ENIN340/3.0</a></th>
+		<td>Topics in Innovation and Entrepreneurship</td>
+		<td>Summer 2019</td>
+    </tr>
+    <tr>
+        <th scope="row"><a href="https://www.queensu.ca/artsci_online/courses/reading-french" class="nav">FRST105/3.0</a></th>
+		<td>Reading French</td>
+		<td>Summer 2019</td>
+    </tr>
+  </tbody>
+</table>
+
         <!-- End div for container-->
         <br><br>
     </div>
-	<div class="footer">
+	<div class="footer text-center">
       		<h4>Queen's University</h4>
       		<p><small>© 2019 Arts and Science Course Catalog, Continuing and Distance Studies, Queen's University. All Rights Reserved.</small></p>
 	</div>
