@@ -1,0 +1,89 @@
+#body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    background-color: #FFF;
+    width : 98%;
+    height: 100%;
+    margin: 0;
+	color: #000;
+	font-size: 100%;
+	line-height: normal;
+    padding: 15px;
+}
+
+#header {
+height: 200px;
+  padding: 20px 30px 20px;
+  text-align: center;
+  background: #0e2058;
+  color: white;
+  font-size: 25px;
+	line-height: 5px;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.jumbotron {
+	margin-bottom: 0px; 
+	padding-top: 10px;
+	height: 230px;
+	margin-top: 0px;
+	background-colour: #C0C0C0;
+}
+
+#menu {
+	width: 100%;
+	height: auto;
+	font-size: 16px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 3px 2px 3px #333333;
+	background-color: #69C;
+	position: relative;
+	top: auto;
+}
+
+#menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+
+}
+
+#menu li { 
+display: inline; 
+padding: 10px; 
+
+}
+
+#menu a {
+	text-decoration: none;
+	color: #FFF;
+	padding: 8px 8px 8px 8px;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color: #FFF;
+	background-color: #FFD700;
+}
+
+.navbar li a {
+ line-height: 30px;
+}
+
+#footer {
+   bottom: 0;
+   width: 100%;
+	height: 60px;
+   background-color: #0e2058;
+   color: white;
+   text-align: center;
+	line-height: 2px;
+	padding: 1px;
+	padding-bottom: 4px;
+}
+
+.footer {
+  border-top: double;
+}
+
