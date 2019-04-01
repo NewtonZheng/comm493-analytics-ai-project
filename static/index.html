@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Queen's University Arts and Science Online Courses</title>
-	<!-- Added CSS and bootstrap code link -->
-	<link rel="stylesheet" href=/static/stylesheets/design.css>
+    <meta charset="UTF-8">
+    <title>Queen's University Arts and Science Online Courses</title>
+    
+    <!-- Added CSS and bootstrap code link -->
+    <link rel="stylesheet" href=/static/stylesheets/design.css>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+</script>
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="{{ url_for('static', filename='js/form.js') }}"></script>
 </head>
-	<body>
+
+<body>
+    
+    <script>
+		$(document).ready(function(){
+            alert("HTML page loaded");
+		});
+
+        $(document).ready(function(){
+            $("#Submit").click(function(){
+                    alert("Submit button clicked successfully");
+                
+                    $.ajax({
+                        data : {
+                            name : $('#nameInput').val(),
+                            //email : $('#emailInput').val(),
+                            //group : $('#group-pref-input').val(),
+                        },
+                        type : 'POST',
+                        url : '/process'
+                    })
+                    .done(function(data) {
+
+                        if (data.error) {
+                            $('#errorAlert').text(data.error).show();
+                            $('#successAlert').hide();
+                        }
+                        else {
+                            $('#successAlert').text(data.name).show();
+                            $('#errorAlert').hide();
+                        }
+                    });
+
+                    //Prevents default html form submission from happening
+                    event.preventDefault();
+
+                
+                
+            /*
+                
+                    //Takes the input from the user from the input and store in a variable
+                    //var user_input = ;
+
+                    //return false if user input is null
+                    if (user_input.length <= 0) return false;
+
+                    //Check that comment is there, and if so then send an AJAX request
+                    //Python will have to check the parameter probably
+
+                    $.ajax({
+                        url: '/search', //Set endpoint URL to display results as @ /search
+                        method: 'POST',
+                        data: {group : $("course_selection").val()},
+                        processData: false,
+                        success: function( data, textStatus, jQxhr ){
+                            alert("Success!")
+                            $('#response pre').html( JSON.stringify( data ) );
+                        },
+                        error: function( jqXhr, textStatus, errorThrown ){
+                            console.log( errorThrown );
+                        }
+                    });
+             */
+
+            });
+        });
+    </script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+...
+    
 	<div class="header">
                 <img src= "queens.png" width="200" height="150" alt="logo" background-colour="white"/>
                 <h3>Online Course Catalog</h3>
@@ -35,8 +117,9 @@
 		<!-- Course criteria options-->
 	<div class="content" style="display:block;">
 		<h3>Filter by:</h3>
-		<form id="course-options-form" name="exam_options_form" action="" method="get">
-            <!-- Course criteria options
+        
+		<!-- <form id="course-options-form" name="exam_options_form" action="" method="get">
+            Course criteria options
 		            <div class="courses-option">
 				<h4>Exam v. No Exam:</h4>
 				<select id="exam_selection" name="filter[]">
@@ -44,7 +127,7 @@
 						<option value="1">Exam</option>
 						<option value="2">No Exam</option>
 				</select>
-			</div> -->
+			</div>
 		        <div class="courses-option">
 				<h4>Group v. Individual:</h4>
 				<select id="course_selection" name="filter[]">
@@ -55,9 +138,48 @@
 			</div>
 			<br>
 		        </form>
+        -->
+        
+        
+        
+        
+<h4>Do you want group projects for this course?</h4>
+	<form class="form-inline">
+		<!-- Email
+	  <div class="form-group">
+	    <label class="sr-only" for="emailInput">Email address</label>
+	    <input type="email" class="form-control" id="emailInput" placeholder="Email">
+	  </div>-->
+		<!-- Name -->
+	  <div class="form-group">
+	    <label class="sr-only" for="nameInput">Name</label>
+	    <input type="text" class="form-control" id="nameInput" placeholder="Type yes or no">
+	  </div>
+		<!-- Dropdown test
+		<select name="group" id="group-pref-input" class="form-control">
+				<option value="3">Select group preference</option>
+				<option value="SomeText">Group Work</option>
+				<option value="5">Individual Work</option>
+		</select>-->
+
+
+		<!-- NEXT STEP: Pass data to backend and pass data back. Use javascript and python existing code as template!!! -->
+
+
+	  <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+	</form>
+	<br>
+	<div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>        
+
+        
+        
+        
+    
 
 			<!-- Submit button is here-->
-		    <input type="hidden" id="output1" name="view" value="table" /><input type="submit" name="course_options_submit" value="Submit"/>
+			<input type="hidden" id="output1" name="view" value="table" />
+			<input type="submit" id="Submit" name="course_options_submit" value="Submit"/>
 	</div>
 	</div>
 
