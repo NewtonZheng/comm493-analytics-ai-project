@@ -6,7 +6,7 @@ Inquiry provides Queen's University students with a way to search for online Art
 
 [Video Demo Link](https://youtu.be/aSixoxLwBRk)
 
-There are two ways to run the code below:
+There are two ways to run the code in this Github repository:
 1. Run using JupyterLab
 2. Run using localhost
 
