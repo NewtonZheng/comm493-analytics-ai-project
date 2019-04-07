@@ -11,7 +11,7 @@ There are two ways to run the code in this Github repository:
 2. Run using localhost
 
 # To run in JupyterLab
-cd the folder that contains all the coding files in this Github repository
+cd the folder that contains all the coding files in this Github repository. 
 Change the port in `FinalCodev6.py` to the appropriate port for your JupyterLab
 
 Then run the following code:
