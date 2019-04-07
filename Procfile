@@ -1,1 +1,1 @@
-web: gunicorn FinalCodev6:app
+web: gunicorn FinalCodev6.py
