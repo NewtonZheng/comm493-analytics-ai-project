@@ -5,7 +5,8 @@ from flask import Flask, jsonify, request
 from urllib import request as req
 
 #Imports the Discovery Functionality
-from watson_developer_cloud import DiscoveryV1
+#from watson_developer_cloud import DiscoveryV1
+from ibm_watson import DiscoveryV1
 
 #This sets up the app as a flask app
 app = Flask(__name__)
@@ -134,7 +135,7 @@ def process():
 
 
     # Queries for courses with GROUP WORK
-    elif request.form['name'] == 'yes': 
+    elif request.form['name'] == 'yes':
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:group'))
 
         filtered_course_list = []
