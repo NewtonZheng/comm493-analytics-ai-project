@@ -26,6 +26,8 @@ def Welcome():
     return app.send_static_file('index.html')
 
 
+#Takes data from the AJAX POST method in Javascript
+
 @app.route('/process', methods=['POST'])
 def process():
 
@@ -36,9 +38,11 @@ def process():
     if (request.form['exam'] == 'no' and request.form['name'] == 'no'): 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:!proctored, group')) 
 
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
-        #Checks the query results with the course_list variable
+        #Checks the query results with the course_list variable, adds to the variable if it matches
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
@@ -55,6 +59,8 @@ def process():
     elif (request.form['exam'] == 'yes' and request.form['name'] == 'yes'): 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:final, exam, proctored, group')) 
 
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
         #Checks the query results with the course_list variable
@@ -76,6 +82,8 @@ def process():
     elif (request.form['exam'] == 'no' and request.form['name'] == 'yes'): 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:!"proctored",text:"group"')) 
 
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
         #Checks the query results with the course_list variable
@@ -97,6 +105,8 @@ def process():
     elif (request.form['exam'] == 'yes' and request.form['name'] == 'no'): 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:"proctored",text:!"group"')) 
 
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
         #Checks the query results with the course_list variable
@@ -120,7 +130,8 @@ def process():
 
     elif request.form['exam'] == 'no': 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:!proctored')) 
-
+        
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
         filtered_course_list = []
 
         #Checks the query results with the course_list variable
@@ -141,7 +152,9 @@ def process():
 
     elif request.form['exam'] == 'yes': 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:final, exam, proctored')) 
-
+        
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
         #Checks the query results with the course_list variable
@@ -163,6 +176,8 @@ def process():
     elif request.form['name'] == 'yes': # Corresponses with line 52 in index.html
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:group')) 
 
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
         #Checks the query results with the course_list variable        
@@ -184,6 +199,8 @@ def process():
     elif request.form['name'] == 'no':
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:!group')) 
 
+        #Creates new empty variable calld filtered_course_list to store courses that matches the results
+        
         filtered_course_list = []
 
         #Checks the query results with the course_list variable        

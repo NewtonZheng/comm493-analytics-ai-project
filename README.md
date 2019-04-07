@@ -1,5 +1,8 @@
 # comm493-analytics-ai-project
 Final COMM493 Analytics and AI for Business Project
+Product: Inquiry
+
+Inquiry provides Queen's University students with a way to search for online Arts & Science courses based on their group and exam preferences
 
 [Video Demo Link](https://youtu.be/aSixoxLwBRk)
 
