@@ -5,8 +5,8 @@ from flask import Flask, jsonify, request
 from urllib import request as req
 
 #Imports the Discovery Functionality
-#from watson_developer_cloud import DiscoveryV1
-from ibm_watson import DiscoveryV1
+from watson_developer_cloud import DiscoveryV1
+#from ibm_watson import DiscoveryV1
 
 #This sets up the app as a flask app
 app = Flask(__name__)
