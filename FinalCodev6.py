@@ -134,7 +134,7 @@ def process():
 
 
     # Queries for courses with GROUP WORK
-    elif request.form['name'] == 'yes': # Corresponses with line 52 in index.html
+    elif request.form['name'] == 'yes': 
         my_course_query = str(discovery.query('812fbe50-c0d5-41dc-80c9-77fc6563cb40', 'b213e90d-6df5-4f68-9456-5ba78da80be1', 'text:group'))
 
         filtered_course_list = []
