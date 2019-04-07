@@ -6,6 +6,9 @@ from flask import Flask, jsonify, request
 
 #Imports the Discovery Functionality
 from watson_developer_cloud import DiscoveryV1
+
+
+#Run this code below instead of 'from watson_developer_cloud import DiscoveryV1' if using localhost instead of JupyterLab
 #from ibm_watson import DiscoveryV1
 
 #This sets up the app as a flask app
@@ -35,6 +38,7 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
@@ -53,10 +57,14 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable
+
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
         
+         #Return the course results and the appropriate message to the HTML front end        
+
         return jsonify({
             'course_output' : filtered_course_list,
             'text_output' : 'SUCCESS! The following courses have BOTH EXAMS and GROUP WORK: ',
@@ -70,9 +78,14 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable
+
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
+        
+        #Return the course results and the appropriate message to the HTML front end
+
         
         return jsonify({
             'course_output' : filtered_course_list,
@@ -86,10 +99,14 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable
+
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
-        
+
+        #Return the course results and the appropriate message to the HTML front end
+                
         return jsonify({
             'course_output' : filtered_course_list,
             'text_output' : 'SUCCESS! The following courses have EXAMS BUT NO GROUP WORK: ',
@@ -106,9 +123,13 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable
+        
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
+        
+        #Return the course results and the appropriate message to the HTML front end
         
         return jsonify({
             'course_output' : filtered_course_list,
@@ -123,10 +144,14 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable
+        
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
-        
+
+        #Return the course results and the appropriate message to the HTML front end
+                
         return jsonify({
             'course_output' : filtered_course_list,
             'text_output' : 'SUCCESS! The following courses have EXAMS: ',
@@ -140,10 +165,14 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable        
+
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
-        
+
+        #Return the course results and the appropriate message to the HTML front end
+                
         return jsonify({
             'course_output' : filtered_course_list,
             'text_output' : 'SUCCESS! The following courses have GROUP WORK: ',
@@ -157,15 +186,21 @@ def process():
 
         filtered_course_list = []
 
+        #Checks the query results with the course_list variable        
+
         for course_name in course_list:
             if course_name in my_course_query:
                 filtered_course_list.append(course_name)
-        
+
+        #Return the course results and the appropriate message to the HTML front end
+                
         return jsonify({
             'course_output' : filtered_course_list,
             'text_output' : 'SUCCESS! The following courses have NO GROUP WORK: ',
         
         })
+    # Returns an error if no input is provided, or if there was a typo in the 'yes' or 'no' response 
+
     else:
         return jsonify({'error' : 'Error: No preferences selected. Try again!'})    
          

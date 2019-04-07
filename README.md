@@ -20,7 +20,7 @@ python3 FinalCodev6.py
 
 # To run locally
 
-In FinalCodev6.py, change `from watson_developer_cloud import DiscoveryV1` to `from ibm_watson import DiscoveryV1`
+In `FinalCodev6.py`, change `from watson_developer_cloud import DiscoveryV1` to `from ibm_watson import DiscoveryV1`
 
 Run the following code in command terminal to set up the Python virtual environment, flask, and IBM Watson:
 
