@@ -1,10 +1,15 @@
 # comm493-analytics-ai-project
 Final COMM493 Analytics and AI for Business Project
 Product: Inquiry
-
-Inquiry provides Queen's University students with a way to search for online Arts & Science courses based on their group and exam preferences
-
 [Video Demo Link](https://youtu.be/aSixoxLwBRk)
+
+# What does InQuiry do? 
+
+InQuiry is a web app that provides Queen's University students with a way to search for online Arts & Science courses based on their group and exam preferences. Once the user inputs a “yes” or “no” into the preference fields, the application generates a query to IBM Watson's discovery tool. IBM Watson will use the discovery tool to scan through the PDFs of a sample of 22 online Queen's courses, where a list of courses relevant to the filtered search will be returned to the web interface.
+
+InQuiry is built with Python, IBM Watson, Javascript, HTML, and CSS.
+
+# How to run the code in this Github Repository
 
 There are two ways to run the code in this Github repository:
 1. Run using JupyterLab
@@ -12,7 +17,7 @@ There are two ways to run the code in this Github repository:
 
 # To run in JupyterLab
 cd the folder that contains all the coding files in this Github repository. 
-Change the port in `FinalCodev6.py` to the appropriate port for your JupyterLab
+Change the port in `FinalCodev6.py` to the appropriate port for your JupyterLab (current port is 5020).
 
 Then run the following code:
 
@@ -42,6 +47,6 @@ flask run
 
 ```
 
-Open localhost:5000 (http://127.0.0.1:5000/) on your browser to launch program
+Open localhost:5000 (http://127.0.0.1:5000/) on your browser to launch program.
 
-Control C to exit program in command terminal
+Control C to exit program in command terminal.
