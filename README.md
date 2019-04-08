@@ -1,7 +1,7 @@
 # comm493-analytics-ai-project
 Final COMM493 Analytics and AI for Business Project
 
-Product: Inquiry
+Product: InQuiry
 
 [Video Demo Link](https://youtu.be/aSixoxLwBRk)
 
